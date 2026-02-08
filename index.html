@@ -37,7 +37,7 @@
         <div class="title_32_circe_extra_bold_blue">
             <p>Весенний квиз от Мира Суши!</p>
         </div>        
-        <div class="text_13_circe_regular_blue">
+        <div class="text_16_circe_regular_blue">
             <p>Путешествуй по вопросам, собирай баллы и отмечай 8 марта красиво</p>
         </div>
         <div class="modal-footer" style="margin-top: 20px;">            
@@ -81,14 +81,14 @@
             <div class="image-main-screen-cat">            
                 <img src="pic/shark_3.png" alt="shark_3_pic">
             </div>
-            <div class="timer-image">
+            <div class="btn-main-screen-hint" style="margin-top: 60px;">
                 <div class="timer-text" id="timer">0</div>
             </div>           
         </div>
         
-         <div class="bg_little_gs">
-            <div id="question_number_id" style="margin-left: 30px; margin-top: 15px;">4/10</div>
-            <div id="question_prize_id" style="margin-left: 90px; margin-top: 15px;">80 БАЛЛОВ</div>
+       <div class="bg_little_gs">
+            <div id="question_number_id" style="flex-grow: 1; display: inline-block; margin-left: 30px;">4/10</div>
+            <div id="question_prize_id" style="flex-grow: 1; display: inline-block; margin-left: auto; margin-right: 30px;">80 БАЛЛОВ</div>
         </div>
                 
         <div  class="question-body"> 
@@ -100,7 +100,7 @@
                 <img src="pic/50.png" alt="50_50_pic">
             </button>
             <button class="btn-main-screen-hint" data-hint="friend">
-                <img src="pic/sushi_master.png" alt="sushi_pic">
+                <img src="pic/gs_logo.png" alt="sushi_pic">
             </button>
             <button id="show-results" class="btn-main-screen-hint">
                 <img src="pic/show_results.png" alt="show_result_pic">
@@ -222,42 +222,42 @@
     </div>
 </div>
 
-<div id="mistersuhint" class="mistersu-dialog">
+<div id="sharkhint" class="shark-hint-dialog">
     <div>
         <div class="modal-image">            
-            <img src="pic/mister_су_pic.png" alt="mister_су_pic">
+            <img src="pic/shark_4.png" alt="shark_hint_pic">
         </div>       
-        <div class="modal-title">
-            <p>ПОДСКАЗКА МАСТЕРА СУ</p>
-        </div>        
-        <div id="mistersu-hint-text" class="mistersu-hint-body">
-            <p>Текст подсказки</p>
+
+         <div class="modal-footer" style="margin-top: 20px;">            
+            <button class="button-common">Подсказка</button>      
         </div>
-        <!-- <div id="palki" class="modal-palki">
-            <img src="pic/palki.png" alt="palki_pic">
-        </div>    -->
-        <div class="modal-footer">            
-            <button id="return-game-button" class="btn-modal-dialog">Вернуться к игре</button>            
+
+        <div id="mistersu-hint-text" class="help-body"> 
+            <p>Текст подсказки</p>
+        </div> 
+               
+        <div class="modal-footer" style="margin-top: 20px;">            
+            <button id="return-game-button" class="return-game-button_body">Вернуться к игре</button>            
         </div>
     </div>
 </div>
 
 <div id="losegame" class="lose-game-dialog">
     <div>
-        <div class="modal-image-lose">            
-            <img src="pic/lose_cat_2.png" alt="lose_game_cat2_pic">
+        <div class="modal-image">            
+            <img src="pic/shark_lose.png" alt="lose_game_shark_pic">
         </div>       
-        <div class="title_28_black">
+
+        <div class="title_25_circe_extra_bold_red_allcaps">
             <p>Эх, бывает</p>
         </div>        
-        <div class="mistersu-hint-body">
-            <p>Знания немного подвели. Но не сдавайся, пробуй еще!</p>
+             
+        <div class="rules-screen-body">
+            <p class="text_16_circe_regular_white">Знания немного подвели. Но не сдавайся, пробуй еще!</p>
         </div>        
-        <div class="modal-palki">            
-            <img src="pic/leika.png" alt="leika_pic">
-        </div>     
-        <div class="modal-footer">            
-            <button id="exit-game-lose" class="btn-modal-lose-game-dialog">Выход</button>            
+        
+        <div class="modal-footer" style="margin-top: 20px;">            
+            <button id="exit-game-lose" class="button-common">Выход</button>            
         </div>
     </div>
 </div>
@@ -528,7 +528,7 @@ function showMisterSuHint(question) {
     let quetionsVariant = getCurrentQuestionListForMisterSu(question);
     let randomHintText = quetionsVariant[Math.floor(Math.random() * quetionsVariant.length)];
     document.getElementById("main_questions_screen_id").style.display = "none";
-    document.getElementById("mistersuhint").style.display = "block";
+    document.getElementById("sharkhint").style.display = "block";
     document.getElementById('mistersu-hint-text').innerHTML = randomHintText;
 }
 
@@ -553,7 +553,7 @@ function getCurrentQuestionListForMisterSu(question) {
 // Скрытие модального окна
     function hideDialog() {
     document.getElementById('сongratulations-dialogue').style.display = "none";
-    document.getElementById('mistersuhint').style.display = "none";
+    document.getElementById('sharkhint').style.display = "none";
     document.getElementById('losegame').style.display = "none";
     document.getElementById('game_stage_screen_id').style.display = "none";
     document.getElementById("main_questions_screen_id").style.display = "block";
@@ -561,7 +561,7 @@ function getCurrentQuestionListForMisterSu(question) {
     }
 
 function hideDialogMisterSuHint() {
-    document.getElementById('mistersuhint').style.display = "none";
+    document.getElementById('sharkhint').style.display = "none";
     document.getElementById("main_questions_screen_id").style.display = "block";
     
     }    
