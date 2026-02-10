@@ -203,7 +203,7 @@
             <p>Поздравлем!</p>
         </div>
         <div id='modal-text' class="mistersu-hint-body">
-            <p> Ты достиг первой несгораемой суммы баллов! Хочешь продолжить игру и испытать удачу или желаешь забрать свой приз?</p>
+            <p> Ты дошел до первой несгораемой остановки! Забираешь баллы или продолжаешь интеллектуальный вояж?</p>
         </div>
         <div id = "modal-footer-bronze-silver" class="modal-footer">
             <button type="button" id="btn-modal-dialog-take-prize-bronze-silver" class="btn-modal-dialog-take-prize">
@@ -253,7 +253,7 @@
         </div>        
              
         <div class="rules-screen-body">
-            <p class="text_16_circe_regular_white">Знания немного подвели. Но не сдавайся, пробуй еще!</p>
+            <p class="text_16_circe_regular_white">Сегодня вопросы коварнее, чем выбор платья.Но завтра – новая попытка. Возвращайся за реваншем!</p>
         </div>        
         
         <div class="modal-footer" style="margin-top: 20px;">            
@@ -525,28 +525,28 @@ document.querySelectorAll('.btn-main-screen-hint').forEach(button => {
 
     //Показ подсказки места Су
 function showMisterSuHint(question) {
-    let quetionsVariant = getCurrentQuestionListForMisterSu(question);
+    let quetionsVariant = getCurrentQuestionListForHelper(question);
     let randomHintText = quetionsVariant[Math.floor(Math.random() * quetionsVariant.length)];
     document.getElementById("main_questions_screen_id").style.display = "none";
     document.getElementById("sharkhint").style.display = "block";
     document.getElementById('mistersu-hint-text').innerHTML = randomHintText;
 }
 
-function getCurrentQuestionListForMisterSu(question) {
+function getCurrentQuestionListForHelper(question) {
     let correctAnswer = question.correctAnswer
 
     return friendHints = [
-    'Хм... Интересный вопрос. Мой внутренний компас указывает на <strong>' + correctAnswer + '</strong>, но... вдруг это ловушка? В общем, решай сам, я лишь скромный наблюдатель за звёздным небом.',
-    'Вероятнее всего, ответ – <strong>' + correctAnswer + '</strong>. Но я бы на твоём месте перепроверил всё трижды, а потом ещё раз. На всякий случай. Просто на всякий.',
-    'По моим расчётам (которые, конечно, могут быть слегка неточными), правильный ответ – <strong>' + correctAnswer + '</strong>. Но... я бы не стал на этом слишком настаивать. Вдруг это всё заговор?',
-    'Интуиция подсказывает мне <strong>' + correctAnswer + '</strong>, но интуиция – штука капризная. Вон, вчера она мне сказала, что дождь будет – а он, видите ли, не пошёл! Задумайся над этим…',
-    'Я вижу... я вижу... Ага! Ответ – <strong>' + correctAnswer + '</strong>. Почти наверняка. Но... есть небольшое, совсем крошечное, едва уловимое сомнение...',
-    'Мой магический хрустальный шар (ну, обычный стеклянный, но звучит так круче) показывает <strong>' + correctAnswer + '</strong>. Однако, этот шар сегодня немного мутноват. Может, его протереть? Или всё-таки рискнуть?',
-    'Согласно древним свиткам (ну, на самом деле, я это в Википедии прочитал), правильный ответ – <strong>' + correctAnswer + '</strong>. Однако, древние свитки часто ошибаются.',
-    'Звёзды намекают на ответ – <strong>' + correctAnswer + '</strong>, но я подозреваю, что это всего лишь планетарное выравнивание, которое не имеет отношения к викторине. Или имеет? Загадка!',
-    'Инстинкты кричат "<strong>' + correctAnswer + '</strong>", но мои инстинкты часто ведут меня к холодильнику, а не к вершинам интеллекта. Сделай выводы.',
-    'Согласно моей тщательно разработанной системе (написанной на салфетке), ответ – <strong>' + correctAnswer + '</strong>. Но салфетка немного заляпана соусом терияки. Случайность? Не думаю...',
-    'Логика подсказывает <strong>' + correctAnswer + '</strong>, но логика – сухая наука. А жизнь прекрасна и многогранна. Как и выбор вариантов ответов.'
+    'Хм... Мой внутренний эхолот указывает на <strong>' + correctAnswer + '</strong>, Но море переменчиво... Решай сам, я лишь скромный попутчик.',
+    'Скорее всего, ответ – <strong>' + correctAnswer + '</strong>. Но я бы на твоем месте перепроверил все по карте. Ну, на всякий случай.',
+    'Если верить моим внутренним архивам (и тому, что я подсмотрел в телефоне у соседа по бизнес-классу), правильный ответ – <strong>' + correctAnswer + '</strong>. Но за точность не ручаюсь, связь в полете так себе!',
+    'Интуиция шепчет про вариант <strong>' + correctAnswer + '</strong>, но интуиция – дама капризная. Вчера она обещала мне штиль, а я весь день боролся с волнами... ',
+    'Вижу... чувствую... Кажется, это ответ – <strong>' + correctAnswer + '</strong>. Но есть крошечное сомнение, размером с икринку...',
+    'Мой магический хрустальный шар (вообще-то это просто крышка от контейнера) показывает <strong>' + correctAnswer + '</strong>. Но он немного запотел. Может, рискнем?',
+    'Мой радар засек подозрительную активность в районе – <strong>' + correctAnswer + '</strong>. Похоже, это цель! Но будь осторожен, на горизонте возможны туманы и сомнения.',
+    'Знаешь, я читал об этом в одном бортовом журнале между статьей о косметике и рекламой часов. Кажется, ответ – <strong>' + correctAnswer + '</strong>, Или это была цена за духи? В общем, я за <strong>' + correctAnswer + '</strong>!',
+    'Инстинкты кричат "<strong>' + correctAnswer + '</strong>", но мои инстинкты обычно приводят меня к холодильнику, а не к научным открытиям. Подумай об этом.',
+    'Согласно моей системе (записанной на плавнике), ответ – <strong>' + correctAnswer + '</strong>. Но я случайно стер часть данных, пока нырял. Доверься своему чутью!',
+    'Логика подсказывает <strong>' + correctAnswer + '</strong>, Но жизнь гораздо интереснее сухих цифр, особенно когда на кону такие призы!'
 ];
 } 
 
