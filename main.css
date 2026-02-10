@@ -78,7 +78,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    background-image: url('pic/bg_blue.jpg'); /* Путь к изображению */
+    background-image: url('pic/bg_2.png'); /* Путь к изображению */
     background-size: 100% 100%; /* Масштабируем изображение, чтобы оно занимало весь контейнер */
     background-position: center; /* Центруем изображение */
     background-repeat: no-repeat; /* Изображение не повторяется */
@@ -91,23 +91,44 @@ h1 {
             margin-bottom: 20px;
         }         
 
+/* Базовый общий класс для всех кнопок */
 .button-common {
-    width: 327px;
     height: 64px;
-    border: 2px solid #FE961B; /* Добавлен стиль границы */
     border-radius: 48px;
     font-size: 25px;
-    font-family: 'CirceExtraBold', Arial, sans-serif;    
+    font-family: 'CirceExtraBold', Arial, sans-serif;
     color: #FEFEFE;
-    background-color: #FE961B;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    }
+}
 
+.button-common-327 {
+    width: 327px;
+    border: 2px solid #FE961B;
+    background-color: #FE961B;
+}
+
+
+/* Класс для кнопки с правилами игры */
 .button-common-rules {
-    border: 2px solid #55C0E9; /* Добавлен стиль границы */
+    width: 327px;
+    border: 2px solid #55C0E9;
     background-color: #55C0E9;
-    }        
+}
+
+/* Класс для призовой кнопки */
+.button-common-prize {
+    width: 140px;
+    border: 2px solid #FE961B;
+    background-color: #FE961B;
+}
+
+/* Класс для следующей кнопки */
+.button-common-next {
+    width: 180px;
+    border: 2px solid #55C0E9;
+    background-color: #55C0E9;
+}
 
 .question-container {
     display: flex; 
@@ -115,14 +136,14 @@ h1 {
     margin-top: 10px;                         
     }
 
-.question {
+.question {    
     font-size: 18px;
     margin-bottom: 20px;
     }
 
 .answers {        
         display: grid;        
-        gap: 10px;
+        gap: 10px;        
         grid-template-columns: 1fr; 
         }
 
@@ -135,6 +156,7 @@ h1 {
         font-family: 'CirceExtraBold', Arial, sans-serif;    
         color: #FEFEFE;                
         background-color: #55C0E9;       
+        padding: 10px;
     }
 .return-game-button_body {            
         width: 327px;
@@ -229,7 +251,7 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    background-image: url('pic/green_bg.jpg'); /* Путь к изображению */
+    background-image: url('pic/bg_2.png'); /* Путь к изображению */
     background-size: 100% 100%; /* Масштабируем изображение, чтобы оно занимало весь контейнер */
     background-position: center; /* Центруем изображение */
     background-repeat: no-repeat; /* Изображение не повторяется */

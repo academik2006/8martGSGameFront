@@ -44,7 +44,7 @@
             <button id="show-rules" class="button-common button-common-rules">Читать правила</button>      
         </div>                
         <div class="modal-footer" style="margin-top: 20px;">            
-            <button id="start-game" class="button-common">Начать игру</button>      
+            <button id="start-game" class="button-common button-common-327">Начать игру</button>      
         </div>
     </div>   
 </div>
@@ -70,7 +70,7 @@
                 <b>Тот, кто правильно ответит на 10 вопрос, заберет главный приз от Мира Суши. <br>
         </div>        
         <div class="modal-footer" style="margin-top: 20px;">            
-            <button id="start-game2" class="button-common">Начать игру</button>      
+            <button id="start-game2" class="button-common button-common-327">Начать игру</button>      
         </div>
     </div>   
 </div>
@@ -197,28 +197,21 @@
 <div id="сongratulations-dialogue" class="modal-dialog">
     <div class="modal-content">
         <div class="modal-image">            
-            <img id="modal-image-pic" src="pic/level1_prize_cat.png" alt="modal_image_pic">
+            <img id="modal-image-pic" src="pic/shark_win.png" alt="modal_image_pic">
         </div> 
-        <div id="modal-header-id" class="modal-title">
+        <div id="modal-header-id" class="title_25_circe_extra_bold_red_allcaps">
             <p>Поздравлем!</p>
         </div>
-        <div id='modal-text' class="mistersu-hint-body">
+        <div id='modal-text' class="rules-screen-body" style="margin-top: 20px;">
             <p> Ты дошел до первой несгораемой остановки! Забираешь баллы или продолжаешь интеллектуальный вояж?</p>
         </div>
-        <div id = "modal-footer-bronze-silver" class="modal-footer">
-            <button type="button" id="btn-modal-dialog-take-prize-bronze-silver" class="btn-modal-dialog-take-prize">
-                <img src="pic/gift.png" alt="Icon" class="icon" style="width: 40px; height: 40px; margin-top: 10px;">
-                <span class="btn-modal-dialog-take-prize-text">Приз</span>
-            </button>           
-            <button id="continue-game-btn" class="btn-modal-dialog-continue">Продолжить</button>
+        <div id = "modal-footer-bronze-silver" class="modal-footer" style="margin-top: 20px;">
+            <button type="button" id="btn-modal-dialog-take-prize-bronze-silver" class="button-common button-common-prize">Приз</button>           
+            <button id="continue-game-btn" class="button-common button-common-next">Дальше</button>
         </div>
-        <div class="modal-footer-gold hidden">
-            <button type="button" id="btn-modal-dialog-take-prize-gold" class="btn-modal-dialog-take-prize-gold">
-                <img src="pic/gift.png" alt="Icon" class="icon" style="width: 40px; height: 40px;">
-                <span class="btn-modal-dialog-take-prize-text">Забрать главный приз</span>
-            </button>                       
-        </div>
-        
+        <div class="modal-footer-gold hidden" style="margin-top: 20px;">
+            <button type="button" id="btn-modal-dialog-take-prize-gold" class="button-common button-common-327">Забрать приз</button>                       
+        </div>        
     </div>
 </div>
 
@@ -229,7 +222,7 @@
         </div>       
 
          <div class="modal-footer" style="margin-top: 20px;">            
-            <button class="button-common">Подсказка</button>      
+            <button class="button-common button-common-327">Подсказка</button>      
         </div>
 
         <div id="mistersu-hint-text" class="help-body"> 
@@ -257,7 +250,7 @@
         </div>        
         
         <div class="modal-footer" style="margin-top: 20px;">            
-            <button id="exit-game-lose" class="button-common">Выход</button>            
+            <button id="exit-game-lose" class="button-common button-common-327">Выход</button>            
         </div>
     </div>
 </div>
@@ -433,7 +426,7 @@ document.querySelectorAll('.btn-main-screen-hint').forEach(button => {
 
         switch (hintType) {
             case 'friend':
-                showMisterSuHint(question);                
+                showHint(question);                
                 break;           
             case '5050':
                 removeTwoWrongAnswers(question);
@@ -498,14 +491,14 @@ document.querySelectorAll('.btn-main-screen-hint').forEach(button => {
         switch (level) {
             case bronzeLevel:
             textHeaderElement.textContent = 'Поздравляем!';
-            modalTextElement.textContent = '80 бонусных баллов - первый промежуточный приз. Забрать или продолжить игру - решать тебе, но если допустишь ошибку дальше, то баллы превратятся в сорняки.';
-            modalImage.src = 'pic/level1_prize_cat.png';  
+            modalTextElement.textContent = 'Ты дошел до первой несгораемой остановки.Забираешь баллы или продолжаешь интеллектуальный вояж?';
+            modalImage.src = 'pic/shark_win.png';  
             prizeDiscounteLevel = bronzeLevel;              
                 break;           
             case silverLevel:            
-            textHeaderElement.textContent = 'Вау!';
-            modalTextElement.textContent = '160 бонусных баллов - второй промежуточный приз. Уже красавчик, но еще не победитель. Хватай и срочно трать на роллы или продолжай путь, но берегись - один неверный ответ и бонусы пойдут на корм кротам.';                
-            modalImage.src = 'pic/level2_prize_cat.png';
+            textHeaderElement.textContent = 'Невероятно!';
+            modalTextElement.textContent = 'Ты уже на финишной прямой. Вторая несгораемая сумма в кармане. Остановимся и отпразднуем или идем на штурм главного приза?';
+            modalImage.src = 'pic/shark_win.png';
             prizeDiscounteLevel = silverLevel;              
                 break;
             case goldLevel:                            
@@ -513,18 +506,17 @@ document.querySelectorAll('.btn-main-screen-hint').forEach(button => {
             document.querySelector('.modal-footer-gold').classList.remove('hidden');
             document.querySelector('.modal-footer-gold').style.display = 'flex';
             document.querySelector('.modal-footer-gold').style.justifyContent = 'center';
-            textHeaderElement.textContent = 'Победа!';
-            modalTextElement.textContent = 'Ты ответил на все вопросы и выиграл 300 баллов! Перед тобой преклоняются все гуру пикников, повелители дач и грозы субботников ;)';
-            modalImage.src = 'pic/level3_prize_cat.png';                    
+            textHeaderElement.textContent = 'Аплодисменты!';
+            modalTextElement.textContent = 'Это ПОБЕДА! 300 бонусных баллов отправляются в твою копилку ;) Твоя эрудиция глубже Марианской впадины, а скорость мышления быстрее сверхзвукового лайнера. Наслаждайся заслуженным триумфом!';
+            modalImage.src = 'pic/shark_win_with_cup.png';                    
             prizeDiscounteLevel = goldLevel;              
                 break;    
         }
 
        
     }
-
-    //Показ подсказки места Су
-function showMisterSuHint(question) {
+    
+function showHint(question) {
     let quetionsVariant = getCurrentQuestionListForHelper(question);
     let randomHintText = quetionsVariant[Math.floor(Math.random() * quetionsVariant.length)];
     document.getElementById("main_questions_screen_id").style.display = "none";
