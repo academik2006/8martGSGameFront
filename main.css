@@ -177,19 +177,18 @@ h1 {
         width: 327px;
         height: 48px;        
         position: relative;
-        border: 2px solid #2B2A29; /* Добавлен стиль границы */
-        border-radius: 16px;
-        font-size: 18px;
-        font-family: 'Commissioner', Arial, sans-serif;    
+        border: 2px solid #55C0E9; /* Добавлен стиль границы */
+        border-radius: 24px;
+        font-size: 22px;
+        font-family: 'CirceExtraBold', Arial, sans-serif;    
         color: #FEFEFE;        
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background-color: #45a049; 
+        text-align: center;                
+        background-color: #55C0E9; 
         }  
 
 .question-list-item.fireproof {        
-        background-color: #C98F22;            
+        background-color: #FE961B;            
+        border: 2px solid #FE961B; /* Добавлен стиль границы */
         }
 
 .hints {
@@ -368,7 +367,7 @@ h1 {
     margin: auto; /* Отцентрируем изображение внутри контейнера */
 }
 
-.image-start-screen_logo {
+.image-start-screen_logo {    
     width: 60%;
     height: 60%;    
     margin: auto; /* Отцентрируем изображение внутри контейнера */
@@ -760,6 +759,19 @@ h1 {
 }
 
 .btn-main-screen-hint {
+    width: 75px;
+    height: 64px;
+    border: 2px solid #FE961B; /* Добавлен стиль границы */
+    border-radius: 24px;
+    gap: 10;
+    cursor: pointer; /* Указатель мыши становится рукой при наведении */
+    background-color: #FE961B; /* Прозрачность фона кнопки */
+    display: flex; /* Размещаем изображение по центру */
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-body {
     width: 75px;
     height: 64px;
     border: 2px solid #FE961B; /* Добавлен стиль границы */
