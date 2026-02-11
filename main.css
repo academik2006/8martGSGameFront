@@ -271,17 +271,6 @@ h1 {
     text-align: center;
 }
 
-.title_28_black {
-    margin-top: 20px;
-    font-size: 28px;
-    line-height: 1;    
-    color: #2B2A29;
-    font-weight: bold;    
-    font-family: 'Commissioner', Arial, sans-serif;    
-    text-transform: uppercase;
-    text-align: center;
-}
-
 .title_32_circe_extra_bold_blue {
     margin-top: 20px;
     font-size: 32px;
@@ -487,9 +476,7 @@ h1 {
     color: white;
     font-size: 32px;
     font-family: 'CirceRegular', Arial, sans-serif;    
-    position: relative;
-    
-    
+    position: relative;   
 }
 
 .bg_little_gs {
